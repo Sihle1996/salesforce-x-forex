@@ -1,0 +1,17 @@
+<template>
+    <div>
+        <h1>Forex Market Dashboard</h1>
+        <template if:true={marketData.symbol}>
+            <ul>
+                <li>Symbol: {marketData.symbol}</li>
+                <li>Ask Price: {marketData.ask}</li>
+                <li>Bid Price: {marketData.bid}</li>
+                <li>Quote: {marketData.quote}</li>
+                <li>Timestamp: {marketData.timestamp}</li>
+            </ul>
+        </template>
+        <template if:false={marketData.symbol}>
+            <p>Loading market data...</p>
+        </template>
+    </div>
+</template>
